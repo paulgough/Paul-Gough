@@ -1,36 +1,524 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>QRG Paper I</title>
+  <title>Quantum Resonance Gravity I: A New Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: sans-serif; max-width: 700px; margin: 40px auto; line-height: 1.6; }
-    nav a { margin-right: 20px; text-decoration: none; color: #0366d6; }
+    body {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fafafa;
+    }
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.2rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.2rem;
+    }
+    h3 {
+      margin-top: 1.5rem;
+    }
+    .author {
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .email {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .abstract {
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 1rem;
+      margin: 1.5rem 0;
+    }
+    .section-label {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      color: #666;
+    }
+    code {
+      font-family: "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.9rem;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 1rem 0;
+      width: 100%;
+      max-width: 100%;
+      background: #fff;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.4rem 0.6rem;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    caption {
+      caption-side: top;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+    .references {
+      font-size: 0.9rem;
+    }
+    .ref-item {
+      margin-bottom: 0.4rem;
+    }
   </style>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="overview.html">QRG Overview</a>
-  <a href="papers.html">Papers</a>
-  <a href="about.html">About</a>
-</nav>
+  <h1>Quantum Resonance Gravity I: A New Foundation</h1>
+  <div class="author">
+    Paul Gough<br>
+    <span>Independent Researcher, United Kingdom</span><br>
+    <span class="email">Email: paulgough@live.com</span>
+  </div>
 
-<h1>Quantum Resonance Gravity I: A New Foundation</h1>
+  <div class="abstract">
+    <div class="section-label">Abstract</div>
+    <p>
+      Quantum Resonance Gravity (QRG) models gravitational phenomena as arising from a scalar
+      resonance mode of an underlying resonant medium, with classical gravity emerging as the
+      long-wavelength, low-frequency limit of this dynamics. In this first paper, we restrict
+      attention to the weak-field, matter-dominated regime and show that the resulting resonance
+      equation reproduces the Newtonian potential together with the standard weak-field relativistic
+      effects of gravitational redshift and time dilation. By modelling light propagation through a
+      resonance-induced refractive index, we further obtain the full general-relativistic light-bending
+      angle $4GM/(b c^2)$ in the appropriate limit.
+    </p>
+    <p>
+      The present formulation employs only the trace of the stress-energy tensor as a source and
+      therefore represents the lowest-order sector of the theory; the coupling to traceless and
+      anisotropic components, as well as the emergence of additional excitation modes beyond the
+      scalar sector, are developed in subsequent papers. Within this scope, QRG provides a consistent
+      classical limit and a physically motivated alternative representation of weak-field gravitational
+      phenomena based on the resonant structure of the vacuum. The scalar sector developed here is
+      not intended as a complete description of gravitational phenomena. It represents the lowest-order
+      limit of a broader resonance framework, with tensorial and traceless sourcing structures introduced
+      in QRG II to recover the full gravitational-wave phenomenology of general relativity.
+    </p>
+  </div>
 
-<p><em>arXiv link will be added mid‑January.</em></p>
+  <h2>I. Introduction</h2>
 
-<p>
-Paper I introduces the resonance field and shows how gravitational behaviour emerges 
-from variations in local resonance frequency. The classical formulation reproduces 
-weak‑field gravity while providing a physical mechanism distinct from geometric curvature.
-</p>
+  <h3>A. The Conceptual Gap</h3>
+  <p>
+    Gravity is traditionally understood through the geometric formulation of general relativity, in which
+    mass and energy curve spacetime and free-falling bodies follow geodesics. This framework has achieved
+    extraordinary empirical success across a wide range of scales, from the weak-field regime of planetary
+    motion to the strong-field dynamics of compact astrophysical systems. Yet despite its predictive power,
+    a deeper question remains: is curvature a fundamental entity, or an emergent description of underlying
+    physical processes?
+  </p>
+  <p>
+    General relativity provides a precise mathematical structure for how matter moves, but it does not specify
+    a physical mechanism for why spacetime curves or how gravitational interaction is mediated at a microscopic
+    level. This gap becomes most apparent when gravity is compared with the other fundamental interactions.
+  </p>
 
-<h2>Key Equation</h2>
-<pre>
-□R = g_R ρ_m
-</pre>
+  <table>
+    <caption>TABLE I: Conceptual contrast between Standard Model interactions and gravity.</caption>
+    <tr>
+      <th>Feature</th>
+      <th>Standard Model Forces</th>
+      <th>General Relativity</th>
+    </tr>
+    <tr>
+      <td>Foundation</td>
+      <td>Dynamical fields</td>
+      <td>Geometric curvature</td>
+    </tr>
+    <tr>
+      <td>Mechanism / Degrees of Freedom</td>
+      <td>Oscillations, quanta, resonances</td>
+      <td>Continuum geometry</td>
+    </tr>
+  </table>
+
+  <p>
+    This asymmetry suggests that the geometric description may be an effective representation of deeper dynamical
+    processes rather than a complete account of gravitational physics. It is important to emphasise that general
+    relativity remains extraordinarily successful across all experimentally tested regimes. The present framework
+    does not dispute these empirical results; rather, it seeks to provide a physical mechanism underlying the
+    geometric description.
+  </p>
+
+  <h3>B. The Resonance Hypothesis</h3>
+  <p>
+    In this work, we explore the possibility that gravitational phenomena arise from a scalar resonance mode of an
+    underlying physical substrate. In this view, gravity is a collective oscillatory response of a medium, with the
+    classical and relativistic limits emerging as long-wavelength, low-frequency approximations.
+  </p>
+  <p>
+    The purpose of this first paper is to:
+  </p>
+  <ul>
+    <li>derive the governing field equation for the resonance mode,</li>
+    <li>identify the effective potential arising from coherent substrate excitations,</li>
+    <li>demonstrate how Newtonian gravity and relativistic effects (redshift, time dilation) emerge without requiring curvature as a primitive concept.</li>
+  </ul>
+  <p>
+    While the present analysis is restricted to the classical limit, the resonance field originates from an underlying
+    quantum-level substrate. This division allows the classical mechanism to be presented transparently before
+    introducing the quantum dynamics in subsequent work.
+  </p>
+  <p>
+    The present paper develops only the lowest-order, scalar, weak-field limit of the full resonance framework. This
+    restriction is intentional: it allows the classical correspondence with Newtonian gravity and the weak-field tests
+    of general relativity to be established cleanly before introducing the additional excitation channels and sourcing
+    structures that arise in the complete theory. QRG I should therefore be viewed as the foundation of a multi-paper
+    programme, with QRG II extending the sourcing mechanism to traceless and anisotropic components and demonstrating
+    the emergence of tensorial resonance modes.
+  </p>
+
+  <h2>II. Resonance Substrate and Field Equation</h2>
+  <p>
+    Quantum Resonance Gravity (QRG) begins with the assumption that gravitational interaction arises from a scalar
+    resonance mode of an underlying physical substrate. Rather than treating curvature as a primitive geometric entity,
+    gravity is modelled as the dynamical response of this substrate to localized energy densities.
+  </p>
+  <p>
+    The resonance field $R(x,t)$ represents the amplitude of this response. We postulate that its evolution is governed
+    by a second-order wave equation:
+  </p>
+  <p>
+    \[
+      \Box R = g_R T,
+    \]
+  </p>
+  <p>
+    where $\Box$ is the d'Alembert operator, $T$ is the trace of the stress-energy tensor, and $g_R$ is a coupling
+    constant. Explicitly,
+  </p>
+  <p>
+    \[
+      \frac{1}{c^2} \frac{\partial^2 R}{\partial t^2} - \nabla^2 R = g_R T.
+    \]
+  </p>
+  <p>
+    In the non-relativistic, matter-dominated regime, $T \approx \rho_m c^2$, giving the static limit:
+  </p>
+  <p>
+    \[
+      \nabla^2 R = - g_R \rho_m.
+    \]
+  </p>
+
+  <h3>A. Correspondence with the Newtonian Limit</h3>
+  <p>
+    The Poisson equation for the Newtonian potential $\Phi_N$ is
+  </p>
+  <p>
+    \[
+      \nabla^2 \Phi_N = 4 \pi G \rho_m.
+    \]
+  </p>
+  <p>
+    Identifying
+  </p>
+  <p>
+    \[
+      R = \Phi_N,
+    \]
+  </p>
+  <p>
+    and comparing with the static resonance equation yields
+  </p>
+  <p>
+    \[
+      g_R = -4 \pi G.
+    \]
+  </p>
+  <p>
+    This ensures that the resonance field generates an attractive potential consistent with
+    $\Phi_N = - GM/r$.
+  </p>
+
+  <h2>III. Weak-Field Limit and Particle Dynamics</h2>
+  <p>
+    In the weak-field regime, the resonance field varies slowly, and the static limit applies:
+  </p>
+  <p>
+    \[
+      \nabla^2 R = - g_R \rho_m.
+    \]
+  </p>
+  <p>
+    Identifying $R = \Phi_N$ ensures consistency with Newtonian gravity.
+  </p>
+
+  <h3>A. Resonance Gradient and Test-Particle Acceleration</h3>
+  <p>
+    Classically, the acceleration of a test particle in a Newtonian potential is
+  </p>
+  <p>
+    \[
+      \mathbf{a} = - \nabla \Phi_N.
+    \]
+  </p>
+  <p>
+    In QRG, the test-particle acceleration is given by
+  </p>
+  <p>
+    \[
+      \frac{d^2 \mathbf{x}}{dt^2} = - \nabla R,
+    \]
+  </p>
+  <p>
+    which reproduces the Newtonian result when $R = \Phi_N$.
+  </p>
+
+  <h3>B. Point-Mass Solution</h3>
+  <p>
+    For a point mass,
+  </p>
+  <p>
+    \[
+      \rho_m(\mathbf{x}) = M \delta^{(3)}(\mathbf{x}),
+    \]
+  </p>
+  <p>
+    the resonance equation becomes
+  </p>
+  <p>
+    \[
+      \nabla^2 R = 4 \pi G M \delta^{(3)}(\mathbf{x}),
+    \]
+  </p>
+  <p>
+    with solution
+  </p>
+  <p>
+    \[
+      R(r) = - \frac{GM}{r},
+    \]
+  </p>
+  <p>
+    consistent with the Newtonian potential.
+  </p>
+
+  <h2>IV. Relativistic Phenomena</h2>
+
+  <h3>A. Gravitational Time Dilation</h3>
+  <p>
+    QRG postulates a coupling between the resonance amplitude and local proper time of the form
+  </p>
+  <p>
+    \[
+      d\tau = \left(1 + \frac{R}{c^2}\right) dt,
+    \]
+  </p>
+  <p>
+    which, using $R = \Phi_N$, reproduces the standard weak-field gravitational time dilation of general relativity.
+  </p>
+
+  <h3>B. Light Bending</h3>
+  <p>
+    The effective refractive index induced by the resonance field is taken as
+  </p>
+  <p>
+    \[
+      n(r) = 1 + \frac{2 \Phi_N(r)}{c^2}.
+    \]
+  </p>
+  <p>
+    Applying Fermat's principle to light propagation in this medium yields the deflection angle
+  </p>
+  <p>
+    \[
+      \Delta \alpha = \frac{4GM}{b c^2},
+    \]
+  </p>
+  <p>
+    in agreement with the general-relativistic prediction for light bending in the weak-field limit.
+  </p>
+
+  <h2>V. Cosmological Implications</h2>
+  <p>
+    In an FLRW background, the resonance field can be decomposed into a homogeneous mode and perturbations.
+    The homogeneous mode satisfies a damped evolution equation with Hubble friction, while perturbations obey
+    a wave-like equation with expansion-modified propagation. This ensures compatibility with large-scale
+    cosmological evolution and suggests that substrate oscillations are naturally damped by cosmic expansion.
+  </p>
+
+  <h2>VI. Dynamical and Strong-Field Phenomena</h2>
+
+  <h3>A. Resonance Enhancement</h3>
+  <p>
+    The full resonance equation
+  </p>
+  <p>
+    \[
+      \frac{1}{c^2} \frac{\partial^2 R}{\partial t^2} - \nabla^2 R = g_R T
+    \]
+  </p>
+  <p>
+    admits wave-like and resonant behaviour. A source oscillating near a natural mode of the substrate may
+    amplify $R$, producing transient deviations from the $1/r$ profile.
+  </p>
+
+  <h3>B. Propagation and Retardation Effects</h3>
+  <p>
+    The finite propagation speed encoded in the wave operator introduces retardation effects and phase shifts
+    in rapidly evolving systems, providing a dynamical alternative to the instantaneous action of Newtonian gravity.
+  </p>
+
+  <h3>C. Non-Linearity and Extreme Gradients</h3>
+  <p>
+    In regions where $|R| \sim c^2$, linear approximations may fail, suggesting the possibility of non-singular
+    resonance cores in place of classical singularities. This opens a route to finite-density core structures in
+    compact objects within the resonance framework.
+  </p>
+
+  <h2>VII. Discussion</h2>
+
+  <h3>A. Mechanism vs. Geometry</h3>
+  <p>
+    Quantum Resonance Gravity reframes gravitational interaction as the dynamical response of a scalar resonance
+    field rather than a manifestation of geometric curvature. By grounding gravity in a physical substrate, QRG
+    provides a concrete mechanism for how information about mass and energy is mediated through space. The resonance
+    equation naturally incorporates finite propagation speed and wave-like behaviour—features that must be added to
+    Newtonian gravity by hand but arise here as intrinsic properties of the substrate.
+  </p>
+  <p>
+    Rather than adding an extra layer of structure on top of curvature, the resonance framework replaces multiple
+    geometric constructs with a single dynamical mechanism. Instead of requiring a metric, connection, curvature
+    tensor, geodesic equation, and separate propagation laws, QRG models all gravitational behaviour as manifestations
+    of the same underlying resonance dynamics.
+  </p>
+
+  <h3>B. The Nature of the Substrate</h3>
+  <p>
+    A major open question concerns the microphysical nature of the underlying substrate. In this paper, the medium
+    is treated as a continuous fluid in order to develop the classical limit, but the term "Quantum" in QRG suggests
+    a deeper structure. The results presented here are consistent with the substrate being modelled as a quantum
+    vacuum state, potentially analogous to a Bose–Einstein condensate or a superfluid, with $R$ representing a
+    collective excitation of the vacuum.
+  </p>
+
+  <h3>C. Observational Signatures and Deviations</h3>
+  <p>
+    The most significant departures from general relativity arise in the strong-field and high-frequency regimes.
+    QRG suggests that gravity possesses a form of "tuning" associated with the substrate's natural frequencies,
+    leading to possible resonance peaks, enhanced responses, and non-singular cores in compact objects. Such effects
+    provide clear observational targets for distinguishing QRG from geometric gravity.
+  </p>
+
+  <h3>D. Relation to Existing Approaches</h3>
+  <p>
+    The resonance framework intersects with scalar–tensor theories, analogue gravity, and superfluid vacuum models,
+    but differs in treating the resonance substrate as the primary mediator of gravitational interaction rather than
+    an addition to curvature. General relativity is recovered as the long-wavelength, weak-field limit, while the
+    underlying ontology is shifted from geometry to dynamics.
+  </p>
+
+  <h3>E. Limitations and Future Work</h3>
+  <p>
+    The framework developed in this paper is intentionally conservative. It successfully reproduces the Newtonian
+    limit and key relativistic tests (time dilation, redshift, and light bending), and remains compatible with
+    cosmological evolution. Future work will address Lorentz invariance, electromagnetic sourcing, and a full
+    quantum microphysical derivation of the resonance modes and coupling constant.
+  </p>
+
+  <h3>F. Summary</h3>
+  <p>
+    Despite open directions, the results demonstrate that a resonance-based approach can reproduce established
+    gravitational behaviour while offering a coherent dynamical alternative to geometric curvature. QRG provides
+    a foundation upon which more detailed models of sourcing, coupling, and high-frequency behaviour can be
+    developed, and suggests new observational signatures in strong-field or rapidly evolving environments.
+  </p>
+
+  <h2>VIII. Conclusion</h2>
+  <p>
+    This paper has introduced the foundational framework for Quantum Resonance Gravity (QRG), a theory in which
+    gravitational interaction emerges as a scalar resonance mode of an underlying physical substrate. By shifting
+    the description of gravity from a geometric primitive to a dynamical mechanism, the framework provides a
+    physical basis for interaction that is consistent with the wave-like nature of the other fundamental forces.
+  </p>
+  <p>
+    The primary results show that the resonance field equation $\Box R = g_R T$ reduces to the Poisson equation
+    in the appropriate limit, ensuring agreement with Newtonian gravity and Keplerian dynamics, and that coupling
+    the resonance amplitude to proper time and an effective refractive index reproduces gravitational redshift,
+    time dilation, and the $4GM/(b c^2)$ light-bending angle.
+  </p>
+  <p>
+    While general relativity excels at describing the "what" of gravity through geometric curvature, QRG offers a
+    pathway toward understanding the "how" through resonance. The dynamical nature of the theory introduces novel
+    phenomena—such as resonance enhancement, retardation effects, and non-singular cores—that provide clear
+    observational targets for future astrophysical tests.
+  </p>
+
+  <h2>IX. Outlook: Toward a Complete Resonance Framework</h2>
+  <p>
+    The development of QRG presented here establishes a consistent classical limit in which gravitational effects
+    emerge from a scalar resonance field embedded in a physical substrate. This is intended as the first step in a
+    broader theoretical programme.
+  </p>
+
+  <h3>A. QRG II: Full Sourcing Structure and Tensor Modes</h3>
+  <p>
+    QRG II extends the sourcing structure to include traceless and anisotropic components of the stress-energy
+    tensor and develops higher-order excitation channels of the medium. It demonstrates that the substrate supports
+    transverse resonance modes capable of reproducing the tensorial gravitational-wave polarizations observed in
+    nature.
+  </p>
+
+  <h3>B. QRG III: Quantum Microphysics of the Substrate</h3>
+  <p>
+    QRG III develops a microscopic description of the substrate as a quantum fluid or correlated medium, deriving
+    the resonance equation from a quantum Hamiltonian, identifying the origin of $g_R$, and showing how Lorentz-
+    invariant excitations emerge without a detectable preferred frame.
+  </p>
+
+  <h3>C. QRG IV: Cosmology and Large-Scale Resonant Dynamics</h3>
+  <p>
+    QRG IV applies the full resonance framework to cosmology, exploring coherent substrate excitations as dark-
+    matter-like behaviour, internal energy as an effective dark-energy component, and the implications for structure
+    formation, cosmic acceleration, and strong-field astrophysical phenomena.
+  </p>
+
+  <h3>D. Summary</h3>
+  <p>
+    Together, QRG II–IV extend the classical scalar limit developed here into a complete resonance-based description
+    of gravitational dynamics, spanning weak-field tests, gravitational-wave phenomenology, quantum microphysics,
+    and cosmology. The present paper provides the foundation by establishing the scalar sector and demonstrating its
+    consistency with the classical predictions of general relativity.
+  </p>
+
+  <h2>References</h2>
+  <div class="references">
+    <div class="ref-item">[1] S. Weinberg, <em>Gravitation and Cosmology</em>, Wiley (1972).</div>
+    <div class="ref-item">[2] S. Carroll, <em>Spacetime and Geometry</em>, Addison-Wesley (2004).</div>
+    <div class="ref-item">[3] C. Brans and R. H. Dicke, “Mach's Principle and a Relativistic Theory of Gravitation,” Phys. Rev. 124, 925 (1961).</div>
+    <div class="ref-item">[4] C. Barceló, S. Liberati, and M. Visser, “Analogue Gravity,” Living Rev. Relativ. 14, 3 (2011).</div>
+    <div class="ref-item">[5] G. Volovik, <em>The Universe in a Helium Droplet</em>, Oxford University Press (2003).</div>
+    <div class="ref-item">[6] V. Mukhanov, <em>Physical Foundations of Cosmology</em>, Cambridge University Press (2005).</div>
+  </div>
 
 </body>
 </html>
