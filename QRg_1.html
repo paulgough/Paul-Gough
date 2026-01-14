@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QRG I — A New Foundation</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .paper {
+      max-width: 900px;
+    }
+    .paper h1, .paper h2, .paper h3 {
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .paper h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+    .paper h2 {
+      margin-top: 1.8rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.2rem;
+    }
+    .paper h3 {
+      margin-top: 1.2rem;
+    }
+    .author {
+      margin-bottom: 1.2rem;
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+    .email {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .abstract {
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 1rem;
+      margin: 1.2rem 0 1.6rem 0;
+      font-size: 0.95rem;
+    }
+    .section-label {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      color: #666;
+      margin-bottom: 0.3rem;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 1rem 0;
+      width: 100%;
+      background: #fff;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.4rem 0.6rem;
+      text-align: left;
+    }
+    caption {
+      caption-side: top;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+    .references {
+      font-size: 0.9rem;
+    }
+    .ref-item {
+      margin-bottom: 0.3rem;
+    }
+  </style>
+
+  <script>
+    window.MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>QRG Programme</h2>
+  <a href="index.html">Home</a>
+  <a href="overview.html">Overview</a>
+  <a class="active" href="QRG_I.html">QRG I</a>
+  <a href="QRG_II.html">QRG II</a>
+  <a href="QRG_III.html">QRG III</a>
+  <a href="QRG_IV.html">QRG IV</a>
+</div>
+
+<div class="main">
+  <div class="paper">
+
+    <h1>Quantum Resonance Gravity I: A New Foundation</h1>
+    <div class="author">
+      Paul Gough<br>
+      <span>Independent Researcher</span><br>
+      <span class="email">Email: paulgough@live.com</span><br>
+      <span>Report number: QRG‑I/2026</span>
+    </div>
+
+    <p>
+      PDF version: <a href="QRG_I.pdf">Download QRG I (PDF)</a>
+    </p>
+
+    <div class="abstract">
+      <div class="section-label">Abstract</div>
+      <p>
+        Quantum Resonance Gravity (QRG) is introduced as a resonance-based framework in which gravitational
+        phenomena arise from the collective dynamics of an underlying physical substrate rather than from
+        spacetime curvature. The theory reproduces the Newtonian limit, gravitational redshift, and the full
+        general-relativistic light-bending angle within a weak-field regime, while offering a non-geometric
+        mechanism for gravitational interaction.
+      </p>
+      <p>
+        QRG provides a finite, non-singular response to high-density configurations and suggests a natural
+        route to classical spacetime as an emergent, resonant phase. This first paper establishes the
+        foundational equations, derives the weak-field correspondence with general relativity, and outlines
+        observationally testable consequences. Subsequent papers will extend the framework to strong-field
+        systems, cosmology, and quantum aspects.
+      </p>
+      <p>
+        The present formulation employs only the trace of the stress-energy tensor as a source and therefore
+        represents the lowest-order sector of the theory; the coupling to traceless and anisotropic components,
+        as well as the emergence of additional excitation modes beyond the scalar sector, are developed in
+        subsequent papers. Within this scope, QRG provides a consistent classical limit and a physically
+        motivated alternative representation of weak-field gravitational phenomena based on the resonant
+        structure of the vacuum.
+      </p>
+    </div>
+
+    <h2>I. Introduction</h2>
+
+    <h3>A. The conceptual gap</h3>
+    <p>
+      Gravity is traditionally understood through the geometric formulation of general relativity, in which
+      mass and energy curve spacetime and free-falling bodies follow geodesics. This framework has achieved
+      extraordinary empirical success across a wide range of scales, from the weak-field regime of planetary
+      motion to the strong-field dynamics of compact astrophysical systems. Yet despite its predictive power,
+      a deeper question remains: is curvature a fundamental entity, or an emergent description of underlying
+      physical processes?
+    </p>
+    <p>
+      General relativity provides a precise mathematical structure for how matter moves, but it does not specify
+      a physical mechanism for why spacetime curves or how gravitational interaction is mediated at a microscopic
+      level. This gap becomes most apparent when gravity is compared with the other fundamental interactions,
+      which are described in terms of dynamical fields, quanta, and resonances rather than geometry.
+    </p>
+
+    <table>
+      <caption>TABLE I: Conceptual contrast between Standard Model interactions and gravity.</caption>
+      <tr>
+        <th>Feature</th>
+        <th>Standard Model Forces</th>
+        <th>General Relativity</th>
+      </tr>
+      <tr>
+        <td>Foundation</td>
+        <td>Dynamical fields</td>
+        <td>Geometric curvature</td>
+      </tr>
+      <tr>
+        <td>Mechanism / Degrees of Freedom</td>
+        <td>Oscillations, quanta, resonances</td>
+        <td>Continuum geometry</td>
+      </tr>
+    </table>
+
+    <p>
+      This asymmetry suggests that the geometric description may be an effective representation of deeper
+      dynamical processes rather than a complete account of gravitational physics. The present framework does
+      not dispute the empirical success of general relativity; instead, it seeks to provide a physical mechanism
+      underlying the geometric description, in which curvature emerges as an effective representation of
+      resonance dynamics in an underlying medium.
+    </p>
+
+    <h3>B. The resonance hypothesis</h3>
+    <p>
+      In this work, we explore the possibility that gravitational phenomena arise from a scalar resonance mode
+      of an underlying physical substrate. In this view, gravity is a collective oscillatory response of a
+      medium, with the classical and relativistic limits emerging as long-wavelength, low-frequency
+      approximations.
+    </p>
+    <p>
+      The purpose of this first paper is to:
+    </p>
+    <ul>
+      <li>derive the governing field equation for the resonance mode,</li>
+      <li>identify the effective potential arising from coherent substrate excitations,</li>
+      <li>demonstrate how Newtonian gravity and relativistic effects (redshift, time dilation, light bending) emerge without requiring curvature as a primitive concept.</li>
+    </ul>
+    <p>
+      The present analysis is restricted to the classical, weak-field, matter-dominated regime. The resonance
+      field originates from an underlying quantum-level substrate, but this microphysics is deferred to later
+      work in order to present the classical mechanism transparently. QRG I should therefore be viewed as the
+      foundation of a multi-paper programme, with QRG II extending the sourcing mechanism to traceless and
+      anisotropic
