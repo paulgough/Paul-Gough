@@ -1,0 +1,66 @@
+/* Global layout */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #111;
+  color: #eee;
+  padding: 2rem 1.5rem;
+}
+
+.sidebar h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.sidebar a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  color: #fff;
+}
+
+/* Main content */
+.main {
+  margin-left: 260px;
+  padding: 2rem;
+  max-width: 900px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+pre {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  overflow-x: auto;
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+}
